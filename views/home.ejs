@@ -4,22 +4,17 @@
     <h1>Home</h1>
     <p> <%= startingContent %> </p>
 
-
-  <%  posts.forEach(function(post){ %>
-
-    <h1><%=post.title%></h1>
-    <div class="row">
-      <div class="col-12 col-md-8"><p>
-        <%=post.content.substring(0, 1000) + " ..."%>
-        <a href="/posts/<%=post._id%>">Read More</a>
-        </p></div>
-        <div class="col-6 col-md-4">
-          <img src="" alt="postimg">
-        </div>
-    </div>
-
-
-    <% }) %>
-
+    <%  posts.forEach(function(post){ %>
+      <h1> <%=post.title%> </h1>
+      <p>
+      <%=post.content.substring(0, 1000) + " ..."%>
+      <a href="/posts/<%=post._id%>">Read More</a>
+      </p>
+  
+  
+      <% }) %>
+  
+ 
+ 
 
 <%- include("partials/footer"); -%>
